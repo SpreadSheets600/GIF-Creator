@@ -14,7 +14,7 @@ app.geometry("430x400")
 def gif_button():
   image_folder_path = image_folder_entry.get()
   output_gif_path = output_gif_entry.get() + '.gif'
-  duration_val = duration_entry.get() or 500
+  duration_val = int(duration_entry.get()) or 500
 
   # Get list of image files
   image_files = [os.path.join(image_folder_path, filename) for filename in os.listdir(image_folder_path)
